@@ -1,0 +1,78 @@
+* {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+#add,#Folder {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: block;
+  margin: 1pc;
+}
+#add svg, #Folder svg{
+    width: 24px;
+    height: 24px;
+}
+#divHover {
+  transition: all 0.1s ease-in;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#divHover:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+#divHover:active {
+    background-color: #e7e7e7;
+}
+#divClick {
+    transition: all 0.1s ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+#messages {
+  background-color: #3c4043;
+  color: white;
+  border-radius: 5px;
+  width: 200px;
+  padding: 0.6pc;
+  font-size: 0.8pc;
+  position: absolute;
+  top: 4pc;
+  opacity: 0;
+   user-select: none;
+}
+#add:hover #messages,
+#Folder:hover #messages {
+  animation: fadeIn 0.15s ease-out forwards .5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.logo_steams{
+    width: 4pc;
+    height: 4pc;
+}
