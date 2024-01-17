@@ -24,6 +24,19 @@ Folder.forEach((Folder) => {
   }
 });
 
+let calendar = document.querySelectorAll("#calendar");
+calendar.forEach((calendar) => {
+  calendar.innerHTML = `<div id="divHover">
+<div id="divClick">
+</div>
+<svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSvgIcon-root MuiSvgIcon-fontSizeLarge css-1shn170" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="CalendarTodayIcon" tabindex="-1" title="CalendarToday"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m0 18H4V8h16z"></path></svg>
+</div>`;
+  calendar.style.fill = calendar.dataset.color;
+  if (calendar.dataset.message) {
+    calendar.innerHTML += `<div id="messages"><p>${calendar.dataset.message}</p></div>`;
+  }
+});
+
 
 let logo_steams = Array.from(document.getElementsByTagName('logo_steam'));
 logo_steams.forEach((logo_steam) => {
